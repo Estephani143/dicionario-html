@@ -1,0 +1,406 @@
+<!DOCTYPE html> (Identificação que é HTML5)
+<html lang="pt-br"> (Identificar qual é a linguagem)
+<head></head> (Informações do que vai conter no site)
+
+<meta charset="UTF-8"> (Informar que é escrita latina)
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> (Definindo o visor para fazer seu site parecer bom em todos os dispositivos. Responsivo)
+<meta name="description" content="Estudo de HTML"> (Breve descrição do conteúdo da página)
+<meta name="keywords" content="HTML, CSS, JavaScript"> (Define palavras-chave para os motores de busca)
+<meta name="author" content="John Doe"> (Define o autor de uma página)
+<meta http-equiv="refresh" content="30"> (Atualiza o documento a cada 30 segundos)
+
+<title></title> (Título da página)
+<link rel="stylesheet"	type="text/css" href="estilo.css"/> (Inserir documento CSS)
+<link rel="preload" href="estilos.css" as="style"> (Isso instrui o navegador a carregar os estilos antes que a página precise deles. O atributo as="style" indica que o recurso é um arquivo de estilo.)
+<link rel="icon" href="favicon.ico" type="image/x-icon"> (Inserir imagem da Favicon)
+<link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
+<link rel="alternate" type="application/rss+xml" title="Feed RSS" href="feed-rss.xml"> (Cria um link para um feed RSS associado ao documento HTML)
+<link rel="dns-prefetch" href="https://example.com"> (É usada para indicar ao navegador para realizar uma pré-busca de DNS para o domínio especificado, melhorando a velocidade de carregamento de recursos externos)
+<script language="javascript" src="funcoes.js"></script> (Inserir documento JavaScript)
+<link rel="preload" href="script.js" as="script"> (Esse exemplo instrui o navegador a carregar o script JavaScript antes que ele seja executado. O atributo as="script" indica que o recurso é um script)
+<script src="demo_async.js" async></script> ("async": Indica que o script deve ser carregado de forma assíncrona)
+<script src="demo_defer.js" defer></script> ("defer": Indica que o script deve ser adiado e executado somente após o HTML ser analisado)
+<script></script> (Usar essa tag quando quiser escrever em JavaScript dentro do HTML)
+<script src="meu-script.js" onload="scriptLoadHandler()"></script> ("onload" para executar uma função específica após o carregamento completo de uma imagem, script ou página. A função onload é uma maneira de garantir que seu código JavaScript seja executado apenas após o carregamento completo dos recursos associados)
+<noscript></noscript> (Será exibido somente quando os scripts estiverem desativados ou não suportados no navegador do usuário)
+<style></style> (Estilo da tipografia em CSS)
+<link rel="preload" href="fonte.woff2" as="font" type="font/woff2" crossorigin="anonymous"> (Isso é usado para carregar fontes de maneira eficiente. O atributo as="font" indica que o recurso é uma fonte.)
+<base href="https://www.exemplo.com/"> (É útil quando você está lidando com vários links relativos em uma página e deseja especificar uma URL base comum para todos eles)
+
+<body></body> (Define o documento que será mostrado no site)
+<body onafterprint="myFunction()"></body> (É usado para definir uma função JavaScript que será executada após o usuário solicitar a impressão da página)
+<body onbeforeprint="myFunction()"></body> (É usado para definir uma função JavaScript que será executada antes do usuário solicitar a impressão da página)
+<body onbeforeunload="return myFunction()"></body> (É usado para especificar uma função JavaScript que será executada antes que a página seja descarregada [ou antes de o usuário navegar para outra página, fechar a guia/navegador, etc.]. Este evento é muitas vezes usado para exibir um aviso ao usuário antes de deixar a página, principalmente quando há dados não salvos)
+<body onhashchange="hashChangeHandler()"></body> ("onhashchange" em HTML é usado para associar uma função JavaScript que será executada quando a parte de fragmento da URL (hash) for alterada. O evento hashchange é disparado sempre que a parte de fragmento da URL (após o caractere #) é modificada, seja por meio de um clique em um link de ancoragem (<a href="#alguma-coisa">) ou por meio de scripts que manipulam a parte de fragmento da URL)
+<body onload="pageLoadHandler()"></body) ("onload" para executar uma função específica após o carregamento completo de uma imagem, script ou página. A função onload é uma maneira de garantir que seu código JavaScript seja executado apenas após o carregamento completo dos recursos associados)
+<body onoffline="offlineHandler()"></body> ("onoffline" em HTML é usado para associar uma função JavaScript que será executada quando o navegador detectar que a conexão de rede do usuário foi perdida. Este evento é acionado quando o dispositivo fica offline, ou seja, perde a capacidade de se conectar à internet.)
+<body ononline="onlineHandler()"></body> ("ononline" em HTML é usado para associar uma função JavaScript que será executada quando o navegador detectar que a conexão de rede do usuário foi restabelecida após estar offline. Este evento é acionado quando o dispositivo volta a ficar online, ou seja, recupera a capacidade de se conectar à internet.)
+<body onpagehide="pageHideHandler()"></body> ("onpagehide" é uma parte da API de Navegação do HTML5 e é acionado quando uma página da web está prestes a ser ocultada ou descartada. Este evento é muitas vezes usado para realizar ações específicas antes que o usuário saia da página, feche a janela do navegador ou navegue para outra página.) 
+<body onpageshow="pageShowHandler()"></body> (É uma parte da API de Navegação do HTML5 e é acionado quando uma página da web é exibida ou restaurada. Este evento é geralmente utilizado para realizar ações específicas quando uma página é carregada ou exibida novamente.)
+<body onpopstate="popstateHandler()"></body> (Quando ocorre uma mudança no histórico de navegação (por exemplo, clicando nos botões "voltar" ou "avançar" do navegador), A função associada ao onpopstate é chamada, exibindo as informações do estado do histórico no console. Este é apenas um exemplo, e em uma aplicação real, você geralmente responderia a mudanças de estado do histórico para atualizar dinamicamente o conteúdo da página.)
+<body onresize="resizeHandler()"></body> ("onresize" em HTML é acionado quando a janela do navegador é redimensionada. Ele permite que você execute ações específicas em resposta a alterações no tamanho da janela.)
+<body onscroll="scrollHandler()"></body> ("onscroll" em HTML é acionado quando o conteúdo de um elemento com barras de rolagem, como uma página da web ou uma <div> com overflow: auto, é rolado.)
+<body onunload="unloadHandler()"></body> ("onunload" em HTML é acionado quando a página da web está prestes a ser descarregada, seja porque o usuário está navegando para fora da página, fechando a janela do navegador ou atualizando a página. Esse evento pode ser usado para realizar ações antes que o documento seja descarregado.)
+-
+<header></header> (Cabeçalho)
+<h1></h1> até <h6></h6> (Títulos para o corpo do site)
+<hgroup></hgroup> (Grupo de títulos)
+<p></p> (Parágrafo)
+<div></div> (Divisão de texto)
+<div oncontextmenu="myFunction()" contextmenu="mymenu"></div> (oncontextmenu="myFunction()": Este atributo indica que a função JavaScript chamada "myFunction()" será executada quando o evento de menu de contexto for acionado na <div>. O evento de menu de contexto é disparado quando o usuário clica com o botão direito do mouse sobre o elemento. Esse atributo pode ser usado em todas as tags)
+<nav></nav> (Menu para navegação de barra)
+<section></section> (Define a sessão do site. Geralmente o texto principal)
+<article></article> (Artigo)
+<aside></aside> (Conteúdo lateral)
+<footer></footer> (Rodapé)
+<main></main> (É usada para indicar o conteúdo principal do documento. Ela é geralmente utilizada para envolver o conteúdo central da página, excluindo cabeçalhos, rodapés e barras laterais)
+<menu type="context" id="menu"><menuitem label="Copiar" onclick="executarAcao('copiar')"></menuitem></menu> (Fornecer uma estrutura semântica para criar menus de contexto, que são menus contextuais que aparecem quando o usuário clica com o botão direito do mouse em determinados elementos na página. Usado em conjunto com JavaScript)
+
+<a href="https://nome-do-link.com" target="_blank"></a> (Abre o link em outra aba)
+<a href="https://nome-do-link.com" target="_self"></a> (Abre o link na mesma aba)
+<a href="https://nome-do-link.com" target="_parent"></a> (No caso de "_parent", ele instrui o navegador a abrir o link no contexto do pai do elemento atual. Se você estiver usando frames ou iframes em sua página, isso fará com que o link seja aberto na janela ou frame pai.)
+<a href="https://nome-do-link.com" target="_top"></a> (Quando "_top" é usado, ele instrui o navegador a substituir completamente o conteúdo da janela atual pela página referenciada pelo link. Isso significa que, se a página contiver frames, o link será aberto na janela superior (ou seja, fora de qualquer frame))
+<a href="https://nome-do-link.com" accesskey="h"></a> (O atributo "accesskey" é usado para atribuir uma tecla de atalho ao link. Atribui a tecla de atalho "h" ao link. Isso significa que, ao pressionar a tecla "h" junto com a tecla de atalho do navegador o usuário será direcionado para o link)
+<a href="pagina_en.html" hreflang="en"></a> ("hreflang": Serve para indicar o idioma do destino do link. Nesse caso indica que a página vinculada está em inglês)
+<a href="pagina_relacionada.html" rel="parent" rev="subsection"></a> (rel="parent": Indica que a página vinculada é uma "página pai", ou seja, é uma página superior ou relacionada hierarquicamente à página atual. rev="subsection": Indica que a página vinculada é uma "subseção" da página atual)
+<link rel="preload" href="imagem.jpg" as="image"> ("preload" refere-se à prática de carregar recursos (como imagens, scripts, estilos) antecipadamente, antes que sejam realmente necessários. Essa técnica é usada para otimizar o desempenho da página web, reduzindo o tempo de carregamento. / O atributo as="image" indica que o recurso é uma imagem.)
+
+<figure></figure> (Delimitar uma imagem)
+<img id="nome" src="imagem.jpg" width="0" height="0" align="center" alt="Descrição da imagem"> (Inserir Imagem)
+<img src="imagem.jpg" alt="Imagem" onload="imageLoadHandler()"> ("onload" para executar uma função específica após o carregamento completo de uma imagem, script ou página. A função onload é uma maneira de garantir que seu código JavaScript seja executado apenas após o carregamento completo dos recursos associados)
+<img src="imagem.jpg" alt="Imagem" onprogress="progressHandler()"> ("onprogress" em HTML é acionado periodicamente durante o carregamento de recursos, como imagens, scripts ou arquivos. Ele fornece informações sobre o progresso do carregamento. Também usado em <video> e <audio>)
+<picture><source media="(min-width:650px)" srcset="img_pink_flowers.jpg"></picture> (Esta é uma tag HTML introduzida para suportar a seleção dinâmica de imagens com base em várias condições.)
+<figcaption></figcaption> (Usada para fornecer uma legenda para a imagem)
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid"></canvas> (Utilizada para desenhar gráficos, imagens ou outras representações visuais, usando JavaScript)
+<embed src="video.mp4" type="video/mp4" width="300" height="200"> (É utilizada para incorporar conteúdo externo, como plugins, applets ou mídias incorporadas, diretamente em uma página web)
+<iframe src="index.html" width="560" height="315" frameborder="0" allowfullscreen></iframe> (Incorporar outro documento HTML em uma página da web. allowfullscreen para vídeos ficarem em tela cheia, opcional)
+<object data="audio.mp3" type="audio/mpeg" width="300" height="45"><param name="autoplay" value="true"></object> (Usada para incorporar diversos tipos de conteúdo, como arquivos de mídia, applets Java, plugins, e outros objetos incorporados em uma página web. <param> é utilizado para fornecer parâmetros adicionais, como o parâmetro autoplay para iniciar a reprodução automaticamente.)
+-
+<video id="filme" controls="controls" poster="video.jpg" width="340" height="215" loop><source src="how-it-feels.mp4" type="video/mp4"/></video> (Inserir vídeo/ "loop" o vídeo retorna várias vezes)
+<video controls muted><source src="movie.mp4" type="video/mp4"></video> ("muted": Este atributo faz com que o áudio do vídeo seja reproduzido sem som. Em outras palavras, o vídeo será exibido sem áudio, independentemente do áudio original do arquivo de vídeo)
+<video id="myVideo" controls onabort="alert('Video load aborted')"><source src="video.mp4" type="video/mp4"></video> (No caso de um evento de aborto, a função "alert" será chamada, exibindo uma mensagem de alerta ao usuário)
+<video controls onemptied="emptiedHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onemptied" em HTML é usado para associar uma função JavaScript que será executada quando o evento emptied ocorrer em um elemento <audio> ou <video>. O evento emptied é disparado quando o recurso de mídia é reposto e, geralmente, quando o atributo src é modificado para um novo recurso)
+<video controls onerror="errorHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onerro" será chamada quando ocorrer um erro durante o carregamento ou reprodução do vídeo. Usado junto com JavaScript)
+<video controls onloadedmetadata="loadedMetadataHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onloadedmetadata" em HTML é utilizado para associar uma função JavaScript que será executada quando os metadados de um elemento de mídia (como um elemento <audio> ou <video>) forem carregados. Os metadados incluem informações como a duração, dimensões, trilhas de áudio, etc.)
+<video controls onloadstart="loadStartHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onloadstart" em HTML é usado para associar uma função JavaScript que será executada quando o navegador inicia o carregamento de um recurso. Este evento é comumente usado em elementos de mídia, como <audio> e <video>, para realizar ações quando o navegador começa a carregar o conteúdo.)
+<video controls onstalled="stalledHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onstalled" em HTML é acionado quando um elemento de mídia, como <audio> ou <video>, para de ser carregado e entra no estado "stalled" (em inglês, "stalled" significa interrompido ou parado). Isso geralmente ocorre quando há uma interrupção temporária no carregamento de dados de mídia, como durante a reprodução de um vídeo online quando a conexão de rede enfrenta problemas temporários.)
+<video controls onwaiting="waitingHandler()"><source src="video1.mp4" type="video/mp4"></video> ("onwaiting" em HTML é acionado quando a reprodução de um elemento de mídia, como <audio> ou <video>, é interrompida temporariamente e entra no estado de espera (waiting). Isso geralmente ocorre quando o player de mídia aguarda mais dados para continuar a reprodução, como em situações de buffering.)
+-
+<audio id="musica" controls="controls"><source src="musica.mp3" type="audio/mpeg"/></audio> (Inserir áudio)
+<audio controls oncanplay="myFunction()"><source src="exemplo.mp3" type="audio/mp3"></audio> (oncanplay="myFunction()": Associa o evento oncanplay ao elemento de áudio. Quando o áudio está pronto para ser reproduzido, a função JavaScript  "myFunction()" é chamada)
+<audio controls oncanplaythrough="myFunction()"><source src="exemplo.mp3" type="audio/mp3"></audio> (Associa o evento "oncanplaythrough" ao elemento de áudio. Quando o áudio tem buffer suficiente para ser reproduzido até o final sem interrupções significativas, a função JavaScript  "myFunction()" é chamada)
+<audio controls ondurationchange="durationChangeHandler()"><source src="sample.mp3" type="audio/mp3"></audio> ("ondurationchange" em HTML é usado para associar uma função JavaScript que será executada quando a propriedade duration de um elemento <audio> muda. A propriedade duration representa a duração total do áudio em segundos)
+<audio controls onended="endedHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onended" em HTML é usado para associar uma função JavaScript que será executada quando o evento ended ocorrer em um elemento <audio>. O evento ended é disparado quando a reprodução do áudio atinge o final, ou seja, quando a mídia chega ao seu fim)
+<audio controls onloadeddata="loadedDataHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onloadeddata" em HTML é usado para associar uma função JavaScript que será executada quando dados suficientes forem carregados para permitir a reprodução do conteúdo de mídia. Esse evento é comumente usado em elementos de mídia, como <audio> e <video>, para executar ações específicas quando dados suficientes foram carregados e a reprodução pode começar)
+<audio controls onpause="pauseHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onpause" em HTML é acionado quando a reprodução de um elemento de mídia, como <audio> ou <video>, é interrompida. Isso ocorre quando a mídia é pausada manualmente pelo usuário, quando a reprodução atinge o final do conteúdo ou quando há uma interrupção na reprodução por algum motivo.)
+<audio controls onplay="playHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onplay" em HTML é acionado quando a reprodução de um elemento de mídia, como <audio> ou <video>, é iniciada. Isso ocorre quando o usuário pressiona o botão de reprodução ou quando a mídia é iniciada por meio de JavaScript.)
+<audio controls onplaying="playingHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onplaying" em HTML é acionado quando a reprodução de um elemento de mídia, como <audio> ou <video>, é retomada após ser pausada ou interrompida. Isso ocorre quando a mídia é pausada e, em seguida, o usuário a reinicia ou quando a reprodução é retomada após ter sido temporariamente interrompida.)
+<audio controls onratechange="rateChangeHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onratechange" em HTML é acionado quando a taxa de reprodução de um elemento de mídia, como <audio> ou <video>, é alterada. A taxa de reprodução refere-se à velocidade com que o conteúdo de áudio ou vídeo está sendo reproduzido. Uma taxa de reprodução de 1.0 indica reprodução normal, valores superiores indicam reprodução mais rápida e valores inferiores indicam reprodução mais lenta.)
+<audio controls onseeked="seekedHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onseeked" em HTML é acionado quando a operação de busca (seeking) de um elemento de mídia, como <audio> ou <video>, é concluída. A busca é a ação de mover a reprodução para um determinado ponto na linha do tempo da mídia.)
+<audio controls onseeking="seekingHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onseeking" em HTML é acionado quando a operação de busca (seeking) de um elemento de mídia, como <audio> ou <video>, é iniciada. A busca é a ação de mover a reprodução para um determinado ponto na linha do tempo da mídia.)
+<audio controls onsuspend="suspendHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("onsuspend" em HTML é acionado quando um elemento de mídia, como <audio> ou <video>, entra no estado de suspensão. Isso geralmente ocorre quando a reprodução é interrompida temporariamente, seja por uma razão específica da mídia ou devido a outros fatores, como buffer insuficiente.)
+<audio controls ontimeupdate="timeUpdateHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> ("ontimeupdate" em HTML é acionado periodicamente enquanto um elemento de mídia, como <audio> ou <video>, está sendo reproduzido e a posição de reprodução (tempo) é alterada.)
+<audio controls onvolumechange="volumeChangeHandler()"><source src="audio1.mp3" type="audio/mp3"></audio> (onvolumechange em HTML é acionado quando o volume de um elemento de mídia, como <audio> ou <video>, é alterado. Esse evento é útil para detectar mudanças no volume e realizar ações correspondentes.)
+<audio controls preload="none"><source src="horse.ogg" type="audio/ogg"></audio> (preload="none": Este atributo define a estratégia de pré-carregamento do áudio. No caso de "none", o navegador não pré-carrega o áudio automaticamente. Isso significa que o áudio não é baixado até que o usuário inicie a reprodução. Outras opções para o atributo preload incluem "auto" e "metadata", que pré-carregam o áudio de maneiras diferentes.)
+-
+<track kind="subtitles" label="Inglês" src="legendas-en.vtt" srclang="en" default> (Usado em audio ou vídeo para legendas. Tem que ter colocado dentro da tag <audio> ou <video>. "default": Indica que esta é a pista de legendas padrão, que será exibida automaticamente se o usuário não escolher uma específica)
+<track kind="subtitles" src="example.vtt" srclang="en" label="English" oncuechange="handleCueChange(event)"> ("oncuechanche" em junto com JavaScript é usado em conjunto com elementos <track> para lidar com mudanças na sinalização de legendas ou descrições de texto associadas a um elemento de mídia, como um elemento <audio> ou <video>)
+* Seu navegador não suporta o elemento de vídeo. (Informação caso o navegador não suporte. Tem que ser colocado dentro da tag de <audio></audio> ou <video></video> depois se inserir o arquivo)
+
+<span></span> (Define a seção de um documento em inline, depois pode alterar as propriedades no CSS)
+<span translate="no"></span> (Indica que o conteúdo dentro do elemento não deve ser traduzido automaticamente pelo navegador)
+<wbr> (Quebra de palavras. Não quebra palavras com hífen)
+&shy; (Quebra palavras com hífen)
+&nbsp; (Espaço não quebrável)
+<br> (Quebra de linha)
+<hr> (Utilizada para criar uma linha horizontal)
+<b></b> (Deixa o texto em negrito)
+<i></i> (Italico)
+<em></em> (Ênfase)
+<u></u> (Sublinhado)
+<del></del> (Riscado no meio da palavra)
+<strong></strong> (Deixa texto mais forte)
+<sup></sup> (Palavra fica sobreescrita)
+<sub></sub> (Palavra fica subescrito)
+<code></code> (Tudo que estiver dentro dessa Tag será mostrado como código ao usuário do site)
+<pre></pre> (Tem que ser colocado antes de depois da tag <code>, para poder visualizar os espaços e enters)
+<blockquote cite="https://..."></blockquote> (Marca uma citação extensa, cria um elemento de bloco e recebe um atributo cite com a fonte)
+<q cite="https://..."></q> (Envolver em aspas. Serve para citação. Marca uma citação inline [No texto])
+<cite></cite> (É utilizado para citar o nome de um trabalho, livro, filme, peça. Não é para citar quem é o autor)
+<bdo dir="rtl"><bdo> OU <bdo dir="ltr"><bdo>  (é usada para substituir a direção de texto padrão)
+<dfn title="Cascading Style Sheets">CSS</dfn> (É usada para marcar um termo específico em um documento, para indicar que está sendo definido ou explicado)
+<ins></ins> (define um texto que foi inserido em um documento. Os navegadores irão geralmente sublinham o texto inserido)
+<mark></mark> (Texto fica marcado em amarelo)
+<small></small> (Diminuir o tamanho da fonte)
+
+<abbr title="Hypertext Markup Language">HTML</abbr> (Serve para abreviações. No "tittle" escreve o nome completo e no texto coloca abreviado)
+<address></address> (Envolve as informações de contato. Dentro de <address>, há parágrafos que incluem o nome, e-mail e endereço)
+<bdi></bdi> (usada para isolar um trecho de texto que pode ter uma direção de texto diferente do texto que o cerca, como escrita Árabe)
+<kbd></kbd> (é usada para indicar a entrada do teclado em um documento, geralmente representando teclas físicas em um teclado)
+<meter min="0" low="40" optimum="60"high="90" max="100" value="50">50%"</meter> (Barra de progresso, serve p/ exibir visualmente a medida ou o progresso de uma quantidade específica. low="40": Define o valor abaixo do qual o medidor é considerado "baixo". "optimum": Este atributo define o valor ótimo ou ideal para a medida representada pelo medidor. No exemplo, o valor ótimo é 60. high="90": Define o valor acima do qual o medidor é considerado "alto".)
+<progress value="50" max="100"></progress> (Barra de progresso, para indicar o progresso de uma tarefa em andamento. Indicado para progresso contínuo)
+<samp></samp> (Indicar que o texto dentro dela é uma representação literal de saída, como algo que você veria no console ao executar um programa)
+<template></template> (É usada para conter um bloco de HTML que não deve ser renderizado quando a página é carregada inicialmente, pode ser usada junto com javascript e mostrar esse texto escondido após realizar alguma função)
+<time datetime="2022-01-13T10:00/2022-01-13T12:00">das 10:00 às 12:00 em 13 de janeiro de 2022</time> (Adiciona semântica ao conteúdo relacionado a datas e horários, pode ser útil para acessibilidade)
+<var></var> (Usada para marcar uma parte do texto que representa uma variável em um contexto de programação ou matemático)
+<dialog></dialog> (É usada para criar uma caixa de diálogo modal que pode ser usada para interagir com o usuário e coletar informações. Esta tag fornece uma maneira padrão de criar caixas de diálogo sem depender de bibliotecas ou scripts externos. Geralmente usado em conjunto com JavaScript)
+<data value="120.50" currency="USD">$120.50</data> (<data> envolve o valor do preço do produto. O atributo value contém o valor numérico do preço. O atributo "currency" pode ser utilizado para fornecer informações adicionais sobre a moeda, neste caso, dólares americanos (USD). Esses dados incorporados podem ser acessados por meio de JavaScript para realizar operações ou manipulações. A tag <data> é útil para incorporar dados semânticos)
+
+<dl></dl> (Define a lista de descrição. Pode ser utilizada em situações como glossários definições ou listas de termos técnicos e suas explicações)
+<dt></dt> (Define um termo [um item da lista de descrição])	
+<dd></dd> (Define a descrição associada ao termo)
+
+<ruby></ruby> (É usada para marcar texto que precisa de anotação ruby. A anotação ruby é frequentemente usada em scripts asiáticos)
+<rp></rp> (É usada para fornecer texto de fallback que será exibido em navegadores que não suportam a anotação ruby. Usa a Tag <ruby> antes)
+<rt></rt> (Anotação [pronúncia ou significado] associada a um ou mais caracteres em scripts como japonês, chinês ou coreano. Usa a Tag <ruby> antes)
+
+<details></details> (É usada para criar um widget de detalhes interativo que pode ser aberto ou fechado para revelar ou ocultar informações adicionais. Geralmente, é combinada com a tag <summary> para fornecer um título ou rótulo para o conteúdo detalhado)
+<details ontoggle="toggleHandler()"></details> (Esse evento é acionado quando o usuário expande ou contrai um elemento <details>. Você pode personalizar a função conforme necessário para realizar ações específicas com JavaScript)
+<details open></details> ("open": Este é um atributo booleano do elemento <details>. Quando presente, o detalhe é inicialmente expandido, mostrando o conteúdo dentro dele. Se o atributo open não estiver presente, o detalhe será inicialmente fechado.)
+<summary></summary> (<details> envolve o conteúdo que pode ser expandido ou recolhido. <summary> fornece um título ou rótulo que será exibido quando o detalhe estiver fechado. Quando o detalhe é expandido, o título é visível junto com o conteúdo adicional)
+
+<!--...--> (Comentários. Não é visível para quem está lendo o site)
+
+____________________________________________________________________________________________________________
+<form method="post"></form> (Formulário)
+<form method="get"></form> (GET envia os dados via URL, é mais rápido e menos seguro. POST envia dados por pacote, mais lento e mais seguro.)
+<form method="post" id="Contato" action="mailto:emails@gmail.com"></form> ("action=mailto" serve para receber a resposta dos formulários por email)
+<form action="/action_page.php" method="get"></form> ("action" Especifica o URL do script de tratamento do formulário no servidor. Quando o formulário é submetido, os dados serão enviados para este URL)
+<form action="/action_page_binary.asp" method="post" enctype="multipart/form-data"> ("enctype": Este atributo é crucial quando você está enviando dados binários, como arquivos. Ele informa ao navegador que o formulário contém dados binários e que o navegador deve codificar o formulário de uma maneira especial para suportar a transmissão de arquivos)
+<form action="/action_page.php" accept-charset="UTF-8"></form> (É utilizado para definir o conjunto de caracteres que será usado para codificar os dados do formulário antes de serem enviados ao servidor quando o formulário é submetido)
+<form action="/action_page.php" method="get" autocomplete="on"></form> (autocomplete="on": Indica que o navegador deve fornecer sugestões automáticas de preenchimento para campos de formulário dentro deste formulário)
+<form onreset="resetHandler()"></form> (É acionado quando um formulário é redefinido, seja por meio da ação de um botão "reset" ou pela chamada do método reset() em JavaScript.)
+<form onsubmit="submitHandler()"></form>  ("onsubmit" em HTML é acionado quando um formulário é submetido, geralmente por meio do envio de um botão "Submit" dentro do formulário. Esse evento permite que você execute ações específicas antes que o formulário seja realmente enviado ao servidor.) 
+<fieldset id="usuario"></fieldset> (Conjunto de campos. Tem que ser colocado a cada conjunto de formulário dentro do <form>)
+<legend>Identificação</legend> (Cada título de um formulário)
+
+
+
+<input type="text" maxlength="30" placeholder="Nome Completo"/> ("text" serve para criar caixa de texto do formulário / "size" indica a quantidade de caracteres exibidos simultâneamente em uma caixa de texto. / "maxlength" indica a quantidade de caracteres aceitos em uma caixa de texto. / "placeholder" aparece um texto informativo na caixa de texto em cor cinza, mas ao clicar sobre o objeto ele desaparecerá)
+<input type="text" dirname="fname.dir"/> ("dirname": Este é um atributo opcional que especifica um diretório associado ao campo de entrada. Esse atributo é usado para indicar ao navegador o nome do diretório no qual os arquivos devem ser gravados quando o usuário seleciona um arquivo usando um diálogo de seleção de arquivo. Não é tão comum e pode não ser suportado por todos os navegadores)
+<input type="text" inputmode="numeric"> ("inputmode="numeric": Indica que o tipo de entrada esperado é numérico. Isso é útil para dispositivos móveis, onde o teclado virtual pode ser ajustado para fornecer um layout mais adequado para entrada numérica)
+<input type="text" inputmode="email"> ("inputmode="email": Indica que o tipo de entrada esperado é um endereço de e-mail. Isso é uma sugestão para o navegador otimizar o teclado virtual em dispositivos móveis, fornecendo um layout mais apropriado para a entrada de endereços de e-mail)
+<input type="datetime-local"/> (É usada para permitir que os usuários insiram uma data e hora local em um formulário)
+<input type="file" accept="image/*" multiple/> (É usada para permitir que os usuários escolham e enviem arquivos para um servidor web. accept="image/*" Especifica que apenas arquivos de imagem são aceitos. O valor image/* significa que qualquer tipo de imagem como JPEG, PNG, GIF, etc.. é permitido. "multiple": Este atributo permite que o usuário selecione vários arquivos ao mesmo tempo.)
+<input type="hidden"/> (é usada para incluir o usuario_id como um campo oculto no formulário. O usuário não vê nem interage diretamente com esse campo, mas o valor é enviado quando o formulário é submetido.)
+<input type="image" src="botao_enviar.png" alt="Enviar"/> (é usada para criar um botão de envio de formulário que usa uma imagem como botão)
+<input type="week"/> (permite aos usuários selecionar uma semana e ano usando um controle de seleção de semana)
+<input type="tel" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}/> (é usada para coletar números de telefone em formulários web/ "pattern" especifica o formato desejado do número de telefone. Neste caso, espera-se um formato de "xx-xxxxx-xxxx", onde "x" é um dígito de 0 a 9.)
+<input type="reset" value="Redefinir Campos"/> (é usada para criar um botão de redefinição em um formulário)
+<input type="password"/> (criar um campo de senha em um formulário web)
+<input type="date"/> (é usado para que o usuário possa escolher uma data)
+<input type="email" required/> (criar um campo de entrada de e-mail em um formulário web / O atributo "required" é usado para indicar que este campo é obrigatório)
+<input type="url" required/> (é usada para criar um campo de entrada de URL em um formulário web. Esse tipo de entrada é projetado para coletar e validar URLs inseridas pelos usuários)
+<input type="range" min="0" max="100" step="1" value="50"/> (usada para criar um controle deslizante [slider] em um formulário web./ "min e max" definem os valores mínimo e máximo que o controle deslizante pode ter./ "step" especifica o incremento ou decremento mínimo entre os valores possíveis./ "value" define o valor inicial do controle deslizante.)
+<input type="month"/> (permite que os usuários escolham um mês e ano usando um controle de seleção de mês integrado)
+<input type="checkbox value="valor1"/> (é usada para criar uma caixa de seleção [checkbox] em um formulário web)
+<input type="color" value="#ff0000"/> (É usada para criar um seletor de cores em um formulário web. Ela permite que os usuários escolham uma cor)
+<input type="time"/> (usado para permitir que os usuários escolham uma hora)
+<input type="search"/> (usada para criar um campo de pesquisa em um formulário web. Esse tipo de entrada é especialmente projetado para permitir que os usuários ingressem termos de pesquisa e é frequentemente usado em caixas de pesquisa.)
+<input type="number" min="1" max="100" step="1" value="1"/> (é usada para criar um campo de entrada numérica em um formulário web / "min e max" definem os valores mínimo e máximo que o controle deslizante pode ter./ "step" especifica o incremento ou decremento mínimo entre os valores possíveis./ "value" efine o valor inicial do campo de entrada.)
+<input type="radio" id="opcao1" name="escolha" value="opcao1"/> (usada para criar botões de opção [radio buttons] em um formulário web. Botões de opção são usados quando os usuários precisam fazer uma escolha única entre várias opções. Importante: O "name" sempre tem que ser o mesmo para as outras opções, dessa forma apenas 1 botão poderá ser clicado)
+<input type="submit" value="Enviar"/> (é usada para criar um botão de envio. Quando esse botão é clicado, o formulário será enviado para o servidor)
+<input type="button"/> (é usada para criar um botão em um formulário ou em qualquer parte de uma página web. Esse tipo de entrada cria um botão clicável que pode ser usado para acionar evento. É importante observar que, ao contrário do <input type="submit"/>, o <input type="button"/> não envia automaticamente formulários.)
+<button type="submit" formaction="/action_page2.php"></button> ("formaction" Especifica que, ao pressionar este botão, o formulário será enviado para o URL "/action_page2.php" em vez do URL especificado no atributo "action" do formulário)
+
+<textarea name="" id="" cols="45" rows="5" wrap="hard" placeholder="Sua mensagem"></textarea> (Serve para criar caixas de textos grandes)"Cols" quantidade de colunas / Rows="Linhas"/ wrap="hard": Este é um atributo que especifica como o texto dentro da área de texto deve ser quebrado. O valor "hard" indica que o texto será quebrado automaticamente nas colunas especificadas pelos atributos cols. Isso significa que, quando o usuário atingir o final de uma linha, a próxima palavra será movida para a próxima linha.)
+
+<output name="resultado" for="ab"></output> (É usada para representar o resultado de um cálculo ou user action. Essa tag é comumente utilizada em conjunto com JavaScript para exibir resultados dinâmicos na interface do usuário)
+
+checked (Colocando no final do "input" o formulário fica automaticamente marcado)
+readonly (Colocando no final do "input" ele não permite que escreva dentro da caixa)
+disabled (Indica que o botão está desativado e não pode ser clicado ou interagido pelo usuário)
+required (O atributo "required" é usado para indicar que este campo é obrigatório)
+inert (Pode ser aplicado a um elemento para torná-lo inerte, o que significa que o elemento e seus descendentes não podem ser focados ou interagidos com pelo usuário. Essa funcionalidade é útil em situações em que você deseja temporariamente desativar a interação com parte do conteúdo da página)
+novalidate (Você está instruindo o navegador a não realizar a validação padrão do formulário. Em outras palavras, ele desativa a validação automática do navegador no formulário)
+autofocus (Indica que o botão deve receber automaticamente o foco quando a página é carregada. Pode ser usadas nas tags <button>, <input>, <select> e <textarea>)
+popover (Este parece ser um atributo personalizado que não é um atributo HTML padrão. A inclusão de atributos personalizados é comum em frameworks JavaScript ou bibliotecas que adicionam funcionalidades específicas à página. Sem mais contexto, é difícil determinar exatamente qual a função ou efeito desse atributo. Pode ser parte de algum código JavaScript ou CSS específico.)
+pattern="[0-9]{2}-[0-9]{5}-[0-9]{4} ("pattern" especifica o formato desejado do número de telefone. Neste caso, espera-se um formato de "xx-xxxxx-xxxx", onde "x" é um dígito de 0 a 9.)
+min="0" max="999" (Colocando no final do "input" consegue definir o número mínimo e máximo)
+step="3" (especifica o incremento ou decremento que ocorrerá quando o usuário aumentar ou diminuir o valor usando as setas do campo de entrada ou controles relacionados. No exemplo, o valor é "3", o que significa que os números serão incrementados ou decrementados em múltiplos de 3)
+size="20" (Indica quantidade de caracteres exibidos simultâneamente em uma caixa de texto)
+minlength="8" (Ele define um limite mínimo de comprimento para a entrada do usuário)
+maxlength="3" (Indica a quantidade de caracteres aceitos em uma caixa de texto)
+tabindex="1" (É usado para especificar a ordem de tabulação. em uma página web. Ele é aplicado a elementos interativos, como links (<a>), botões (<button>), e campos de entrada (<input>, <textarea>, etc.). tabindex="1" e tabindex="2", indicando que o primeiro link (com tabindex 1) será focado primeiro quando o usuário pressionar a tecla Tab, seguido pelo segundo link (com tabindex 2).)
+placeholder="texto" (Configura o conteúdo informativo dentro de um objeto de formulário. Ao clicar sobre o objeto o placeholder desaparecerá)
+value="botão" (Define o valor padrão ou inicial do campo de texto. Quando o formulário é carregado, este será o texto inicial no campo. Ou também servirá como botão de envio, o nome colocado entre as aspas que irá ser exibido no botão)
+class=" " (Está se referindo à atribuição de uma classe a um elemento HTML e é usada para aplicar estilos CSS)
+id=" " (É usado para fornecer uma identificação única a um elemento na página. Cada id deve ser exclusivo em um documento HTML, o que significa que nenhum outro elemento no mesmo documento deve ter o mesmo id)
+name=" " (É utilizado para fornecer um nome a determinados elementos, principalmente em formulários. Este atributo é usado para identificar o elemento quando o formulário é enviado para o servidor. É importante observar que o atributo name não precisa ser exclusivo no documento, ao contrário do atributo id que deve ser único)
+contenteditable="true" (É usado para tornar um elemento da página editável pelo usuário. O navegador fornece uma interface de edição embutida para permitir a modificação do conteúdo.)
+draggable="true" (É utilizado para indicar se um elemento HTML pode ser arrastado pelo usuário ou não. Quando definido como "true", o elemento pode ser arrastado)
+enterkeyhint="search" (Indica ao navegador que a tecla "Enter" associada a este campo de entrada pode ser tratada como uma sugestão de pesquisa. Isso pode afetar o comportamento do teclado virtual em dispositivos móveis e oferecer uma experiência mais contextual ao usuário)
+spellcheck="true" (É usado para controlar a verificação ortográfica (correção ortográfica) em elementos de entrada de texto, como campos de texto e áreas de texto.)
+-
+onblur="myFunction()" (Associa o evento onblur ao campo de entrada de texto, e quando o campo perde o foco, a função JavaScript "myFunction()" é chamada)
+onchange="myFunction()" (Quando o usuário seleciona uma opção diferente, a função JavaScript "myFunction()" é chamada)
+onclick="myFunction()" (O atributo onclick é usado para especificar uma função JavaScript que será executada quando o botão for clicado pelo usuário)
+oncopy="myFunction()" (Será executada quando o evento JavaScript de cópia for acionado no campo de entrada. O evento de cópia é disparado quando o usuário pressiona Ctrl+C (ou Command+C em Mac) para copiar o conteúdo do campo de entrada)
+oncut="myFunction()" (Esse evento será acionado junto com JavaScript quando o usuário cortar [cut] o conteúdo do parágrafo, geralmente usando o atalho de teclado Ctrl+X [ou Command+X em Mac])
+ondblclick="myFunction()" (É usado para associar uma função JavaScript que será executada quando esse evento de duplo clique acontecer)
+ondrag="myFunction(event)" (É usado em conjunto com draggable="true". É utilizado para associar uma função JavaScript que será executada quando um elemento é arrastado)
+ondragstart="dragStartHandler(event)" (É usado em conjunto com draggable="true". Ele é frequentemente utilizado para personalizar o comportamento do arraste e permitir que o desenvolvedor defina dados específicos em JavaScript que serão associados ao objeto sendo arrastado)
+ondragend="dragEndHandler(event)" (É usado em conjunto com draggable="true" e ondragstart="dragStartHandler(event)". é acionado quando o usuário conclui o processo de arrastar e soltar (drag-and-drop) de um elemento. Ele ocorre após o evento ondragstart e indica que o objeto de arraste foi solto ou colocado em um destino)
+ondragover="allowDrop(event)" (É utilizado para associar uma função JavaScript que será executada enquanto um elemento está sendo arrastado sobre uma área designada. Geralmente, essa função é usada para permitir ou bloquear a operação de soltar o elemento arrastado naquela área)
+ondrop="dropHandler(event)" (É utilizado para associar uma função JavaScript que será executada quando um elemento é solto (drop) em uma área designada. Esse evento é uma parte essencial da interação de arrastar e soltar (drag-and-drop) em uma página web)
+ondragenter="dragEnterHandler(event)" (É acionado quando um elemento é arrastado para dentro de uma área designada. Este evento é parte do conjunto de eventos relacionados ao recurso de arrastar e soltar (drag-and-drop) em uma página web)
+ondragleave="dragLeaveHandler(event)" (É executada quando o elemento arrastado sai da área especificada. Durante a execução dessa função, você pode realizar ações específicas ou reverter alterações feitas no visual da área ao entrar)
+onfocus="myFunction(this.id)" (É utilizado para associar uma função JavaScript que será executada quando um elemento recebe foco)
+oninput="myFunction()" (É usado para associar uma função JavaScript que será executada quando o conteúdo de um elemento de entrada (<input>, <textarea>, etc.) é alterado pelo usuário. Esse evento é acionado em tempo real, enquanto o usuário está digitando ou interagindo com o elemento de entrada)
+oninvalid="invalidHandler()" (É usado para associar uma função JavaScript que será executada quando um elemento de formulário (<input>, <select>, <textarea>, etc.) se torna inválido após uma tentativa de envio de formulário. O evento invalid ocorre quando um valor inserido pelo usuário não atende aos critérios de validação definidos pelo atributo pattern, required, min, max, ou outras propriedades de validação de formulário)
+onkeydown="keyDownHandler()" (É usado para associar uma função JavaScript que será executada quando uma tecla é pressionada e mantida pressionada no teclado. Esse evento é acionado enquanto a tecla está sendo pressionada antes de ser liberada. O evento ocorre repetidamente se a tecla permanecer pressionada)
+onkeypress="keyPressHandler()" (É usado para associar uma função JavaScript que será executada quando uma tecla é pressionada e mantida pressionada no teclado. Semelhante ao evento onkeydown, o evento onkeypress é acionado enquanto a tecla está sendo pressionada antes de ser liberada. O evento onkeypress é geralmente usado para lidar com teclas que resultam em caracteres imprimíveis (como letras e números). Ele não é acionado para teclas como "Shift", "Ctrl" ou "Alt")
+onkeyup="keyUpHandler()" (É usado para associar uma função JavaScript que será executada quando uma tecla é liberada (quando a tecla é solta) no teclado. Este evento é acionado após o evento "onkeydown" e "onkeypress", e fornece a oportunidade de responder à tecla que foi solta)
+onmousedown="mouseDownHandler()" (É usado para associar uma função JavaScript que será executada quando um botão do mouse é pressionado sobre um elemento. Esse evento é acionado quando o botão do mouse é pressionado, antes mesmo de ser liberado.)
+onmousemove="mouseMoveHandler(event)" (É usado para associar uma função JavaScript que será executada quando o ponteiro do mouse é movido sobre um elemento. Esse evento é acionado repetidamente enquanto o mouse se move sobre o elemento)
+onmouseout="mouseOutHandler()" (É usado para associar uma função JavaScript que será executada quando o ponteiro do mouse deixa a área de um elemento. Esse evento é acionado quando o mouse sai dos limites do elemento.)
+onmouseover="mouseOverHandler()" (É usado para associar uma função JavaScript que será executada quando o ponteiro do mouse entra na área de um elemento. Esse evento é acionado quando o mouse entra nos limites do elemento.)
+onmouseup="mouseUpHandler()" (É usado para associar uma função JavaScript que será executada quando um botão do mouse é liberado (solto) sobre um elemento. Esse evento é acionado quando o botão do mouse é solto após ter sido pressionado.)
+onwheel="wheelHandler()" (Usado para associar uma função JavaScript a ser executada quando a roda do mouse (scroll) for girada)
+onpaste="pasteHandler()" (é usado para associar uma função JavaScript que será executada quando o usuário cola conteúdo na área de transferência (clipboard) sobre um elemento editável, como um campo de texto (<input type="text">) ou uma área de texto (<textarea>))
+onsearch="searchHandler()" (Em HTML é acionado quando o usuário executa uma pesquisa em um campo de entrada de texto com suporte a pesquisa, como um campo de pesquisa (<input type="search">). Esse evento é geralmente associado a campos de pesquisa e é acionado quando o usuário pressiona "Enter" após digitar uma consulta ou quando ocorre um clique no botão de pesquisa associado ao campo.)
+onselect="selectHandler()" (É acionado quando o usuário seleciona texto em um elemento de entrada de texto ou área de texto. Esse evento é comumente usado em campos de formulário onde os usuários podem destacar e selecionar o texto.)
+
+<label for=" "></label> ("label" serve para criar palavras relacionadas a objetos de formulário. Não precisa clicar na bolinha para o sistema reconhecer, só clica na palavra e ela já reconhece. A palavra a ser colocada dentro da label deve ser de acordo com o id="" informado no input)
+
+
+
+Ex:
+<form action="/action_page.php" method="get" id="Contato">
+  <fieldset id="usuario">
+     <legend>Identificação do Usuário</legend>
+       <label for="cNome"> 
+       Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/>
+       </label>  
+       <input type="submit" value="Enviar">
+  </fieldset>
+</form>
+
+(Importante: Sempre colocar name="" e id="" em todos os inputs. Não podem ter o mesmo nome)
+
+*Como criar opções
+ <select name="tEst" id="cEst">
+   <optgroup label="Região Sudeste"> (Grupo de opções. Pode ter vários grupos com opções)
+    <option value="RJ"> Rio de Janeiro </option>
+    <option value="SP"> São Paulo </option>
+   </optgroup>
+ </select>
+
+* Como fornecer sugestões para o usuário enquanto ele digita
+<input list="cidades" name="cidade-a" id="cidade-b" placeholder="Digite o nome da cidade">
+<datalist id="cidades"> (utilizada para fornecer uma lista de opções sugeridas)
+  <option value="Rio de Janeiro"> (representa uma opção na lista)
+  <option value="São Paulo">
+</datalist>
+
+______________________________________________________________________________________________________
+<ol></ol> (Listas ordenadas)
+<ol reversed></ol> (reversed: Este é um atributo booleano do elemento <ol>. Quando presente, ele inverte a ordem padrão dos itens numerados. Em uma lista normal, o primeiro item tem o número mais baixo, e os números aumentam à medida que você desce na lista. No entanto, com o atributo reversed, o primeiro item terá o número mais alto, e os números diminuirão à medida que você desce na lista.)
+<ul></ul> (Listas não ordenadas)
+<li></li> (Item das listas)
+<ol type="1"></ol> (Com numeração em sequência. 1,2,3)
+<ol type="a"></ol> (Com alfabeto. a,b,c)
+<ol type="A"></ol> (Com alfabeto maiúsculo. A,B,C)
+<ol type="i"></ol> (Com números romanos. i,ii,iii)
+<ol type="I"></ol> (Com números romanos maiúsculos. I, II, III)
+<ol type="1" start="3"></ol> (Informando qual numeração quer que comece)
+<ul type="square"></ul> (Símbolo quadrado)
+<ul type="circle"></ul> (Símbolo redondo, com o meio sem cor)
+<ul type="disc"></ul> (Símbolo redondo pequeno)
+
+<table></table> (Tabela)
+<th></th> (são usados para representar as células de cabeçalho na primeira linha da tabela. As células de cabeçalho geralmente têm um estilo de texto mais forte e podem ser usadas para identificar ou rotular as colunas.)
+<th scope="col"></th> ("col" significa que a célula de cabeçalho se aplica a uma coluna da tabela)
+<thead></thead> (cabeçalho da tabela. Uso semântico) 
+<tfoot></tfoot> (rodapé da tabela.)
+<tbody></tbody> (Também pode substituir o tfoot. Só tem valor semântico)
+<caption></caption> (Conteúdo da tabela)
+<tr></tr> (As linhas horizontais da tabela)
+<td></td> (Linhas verticais)
+<td rowspan="2"></td> (Dar espaço de 2 linhas na horizontal)
+<td colspan="2"></td> (Dar espaço de 2 blocos na vertical)
+<colgroup> (agrupa as colunas)
+<col style="background-color: lightblue;"> (Define uma propriedade específica [nesse caso, a cor de fundo] para a primeira coluna)
+<col span="2" style="background-color: lightgreen;"> (Define a mesma propriedade para as duas colunas seguintes)
+
+-
+Ex: 
+
+<head>  
+ <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+ </style>
+</head>
+
+<body>
+ <table id="tabela">
+  <caption>Tabela para Html</caption>
+  <thead>
+    <tr> <th>Tela</th><th>Câmera</th><th>5mp para Foto</th> </tr>
+  </thead>
+  <tbody>
+    <tr> <td rowspan="2">Tela</td><td>Câmera</td><td>5mp para fotos</td></tr>
+  </tbody>
+  <tfoot>
+    <!-- Conteúdo do rodapé, se necessário -->
+  </tfoot>
+ </table>
+</body>
+
+_______________________________________________________________________________________________________________________________________________
+** Imagem com pontos clicáveis e que cada um mostra uma mensagem **
+
+ <img src="_imagem/imagem.jpg" usemap="#meumapa" ismap/> (Serve para fazer associação de uma imagem com mapa/ "ismap" indica que a imagem é um mapa de imagem interativo. Isso significa que a imagem contém áreas clicáveis que podem ser usadas como links)
+
+  <map name="meumapa"> (Adicionar características de mapa em uma imagem)
+   
+    <area shape="rect" coords="179,202,270,260" href="teste.html#tela" target="janela"/> ("Area Shape" serve para especificar a forma de uma área)
+   
+    <area shape="poly" coords="183,220,265,208,266,242,186,254" href="teste#tela" target="janela"/> ("Coords" são coordenadas da área da imagem em pixels)
+   
+    <area shape="circle" coords="158,243,11" href="teste.html#camera" target="janela"/> (O "target" serve para definir onde está este arquivo, que é o nome que foi dado no <iframe name=" ">. E a # que é colocado ao lado do arquivo em html é de acordo com o id que foi nomeado no teste.html. Ele vai localizar a parte do arquivo que você estiver especificando)
+  </map>
+  
+ <iframe src="teste.html" name="janela" id="frame-spec"></iframe> 
+
+-
+<-- <iframe src="demo_iframe_sandbox.htm" sandbox></iframe> --> (sandbox: Este é um atributo booleano do elemento <iframe>. Quando presente, ele ativa um ambiente restrito chamado "sandbox" (caixa de areia) para o conteúdo dentro do iframe. Isso é uma medida de segurança que restringe o comportamento do conteúdo do iframe, impedindo, por exemplo, a execução de scripts, o envio de formulários e outras ações potencialmente perigosas.)
+<-- <iframe srcdoc="<p>Conteúdo do iframe aqui.</p>"></iframe> --> ("srcdoc" é usado para especificar o conteúdo HTML que deve ser exibido no iframe. Quando você utiliza o srcdoc, o conteúdo HTML é definido diretamente como uma string no atributo.)
+
+
+** E no outro arquivo "teste.html" terá as seguintes informações:**
+
+<article id="tela">
+	<header>
+		<h1>Tela</h1>
+		<h2>Como o mundo vai aparecer</h2>
+	</header>
+	<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário.</p>
+	<img src="det-tela.jpg" alt="Tela do Google Glass"/>
+	</article>
+_______________________________________________________________________________________________________________________________________________
+* Como fazer site responsivo usando HTML que aparece imagens em tamanhos diferentes de acordo com o tamanho da tela
+
+<picture>
+  <source srcset="imagem-grande.jpg" media="(min-width: 800px)"> ("source" para especificar diferentes fontes de imagem)
+  <source srcset="imagem-media.jpg" media="(min-width: 400px)"> 
+  <img src="imagem-pequena.jpg" alt="Descrição da Imagem"> ("img" como fallback padrão)
+</picture>
+
+____________________________________________________________________________________________________________________________________________
+* Criando uma imagem vetorial em SVG
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> 
+</svg>
+
+(Pode conter elementos SVG como <circle>, <rect>, <line>, <path>, entre outros.
+cx="50" e cy="50": Especificam as coordenadas do centro do círculo. Neste caso, o círculo está posicionado no ponto (50, 50) no sistema de coordenadas SVG.
+r="40": Define o raio do círculo, que é 40 unidades.
+stroke-width="3": Define a largura da linha do contorno do círculo como 3 unidades.
+fill="red": Especifica a cor de preenchimento do círculo, que é vermelho.)
+
+
+______________________________________________________________________________________________________________________________________
